@@ -4,10 +4,12 @@ Projeto apenas de aprendizado, criado para praticar implementação dos conceito
 
 ## Tecnologias Utilizadas
 
-<img src="https://img.shields.io/badge/TypeScript-%233178C6?logo=TypeScript&style=for-the-badge&logoColor=white">
-<img src="https://img.shields.io/badge/ReactJS-%2320232A?logo=React&style=for-the-badge&logoColor=lightBlue">
-<img src="https://img.shields.io/badge/Redux-%236a43a9?logo=Redux&style=for-the-badge&logoColor=lightBlue">
-<img src="https://img.shields.io/badge/StyledComponents-%23939393?logo=StyledComponents&style=for-the-badge&logoColor=pink">
+<div style="width: 100%; display: flex; align-items: center; justify-content: center;">
+  <img style="margin-right:10px" src="https://img.shields.io/badge/TypeScript-%233178C6?logo=TypeScript&style=for-the-badge&logoColor=white">
+  <img style="margin-right:10px" src="https://img.shields.io/badge/ReactJS-%2320232A?logo=React&style=for-the-badge&logoColor=lightBlue">
+  <img style="margin-right:10px" src="https://img.shields.io/badge/Redux-%236a43a9?logo=Redux&style=for-the-badge&logoColor=lightBlue">
+  <img src="https://img.shields.io/badge/StyledComponents-%23545454?logo=StyledComponents&style=for-the-badge&logoColor=pink">
+</div>
 
 ## Demontração
 
