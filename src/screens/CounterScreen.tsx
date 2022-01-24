@@ -6,20 +6,9 @@ import Counter from '../components/Counter';
 import { decrementCounter, incrementCounter } from '../redux/actions';
 import { CounterState } from '../type';
 
-const ClassRoom = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ClassRoomControls = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin: 10px 0;
-`;
-
 const ClassRoomBoard = styled.div`
-  margin: 12px;
   display: flex;
+  height: 80vh;
   justify-content: center;
   align-items: center;
 `;
@@ -43,18 +32,13 @@ function CounterScreen() {
   );
 
   return (
-    <ClassRoom>
-      <ClassRoomControls>
-        Tópico único ;)
-      </ClassRoomControls>
-      <ClassRoomBoard>
-        <Counter
-          count={count}
-          incrementCounter={increment}
-          decrementCounter={decrement}
-        />
-      </ClassRoomBoard>
-    </ClassRoom>
+    <ClassRoomBoard>
+      <Counter
+        count={count}
+        incrementCounter={increment}
+        decrementCounter={decrement}
+      />
+    </ClassRoomBoard>
   );
 }
 
