@@ -8,8 +8,6 @@ const Button = styled.button`
   background: none;
   background-color: #272735;
   color: white;
-  align-items: center;
-  justify-content: center;
   transition: 300ms;
 
   &:hover {
