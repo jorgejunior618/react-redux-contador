@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import { CounterAction, CounterState, DispatchType } from '../type';
 import reducer from './reducers';
 
+// Configuração para utilizar o Redux Devtools no navegador
 const composeEnhancers = typeof window === 'object'
    && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({

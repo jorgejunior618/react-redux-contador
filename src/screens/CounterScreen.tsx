@@ -17,19 +17,13 @@ function CounterScreen() {
   const count: number = useSelector((state: CounterState) => state.count);
   const dispatch: Dispatch<any> = useDispatch();
 
-  const increment = React.useCallback(
-    () => {
-      dispatch(incrementCounter());
-    },
-    [dispatch],
-  );
+  const increment = () => {
+    dispatch(incrementCounter());
+  };
 
-  const decrement = React.useCallback(
-    () => {
-      dispatch(decrementCounter());
-    },
-    [dispatch],
-  );
+  const decrement = () => {
+    dispatch(decrementCounter());
+  };
 
   return (
     <ClassRoomBoard>

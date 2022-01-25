@@ -1,20 +1,20 @@
-import { CounterAction, DispatchType } from '../type';
+import { CounterAction/* , DispatchType */ } from '../type';
 
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
-
+/*
 function modifyCounter(action: CounterAction) {
   return (dispatch: DispatchType) => {
     dispatch(action);
   };
 }
-
+ */
 export function incrementCounter() {
   const action: CounterAction = {
     type: INCREMENT,
   };
 
-  return modifyCounter(action);
+  return action;
 }
 
 export function decrementCounter() {
@@ -22,5 +22,5 @@ export function decrementCounter() {
     type: DECREMENT,
   };
 
-  return modifyCounter(action);
+  return action;
 }
