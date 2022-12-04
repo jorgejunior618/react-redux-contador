@@ -1,11 +1,11 @@
 import React from 'react';
 import './css/App.css';
-import CounterScreen from './screens/CounterScreen';
+import CounterScreenHooks from './screens/CounterScreenHooks';
 
 function App() {
   return (
     <div className="App">
-      <CounterScreen />
+      <CounterScreenHooks />
     </div>
   );
 }
