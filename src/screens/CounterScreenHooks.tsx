@@ -13,19 +13,15 @@ function CounterScreen() {
     setCount(count - 1);
   }, [count]);
 
-  function View() {
-    return (
-      <MainWrapper>
-        <Counter
-          count={count}
-          incrementCounter={increment}
-          decrementCounter={decrement}
-        />
-      </MainWrapper>
-    );
-  }
-
-  return View();
+  return (
+    <MainWrapper>
+      <Counter
+        count={count}
+        incrementCounter={increment}
+        decrementCounter={decrement}
+      />
+    </MainWrapper>
+  );
 }
 
 export default CounterScreen;
