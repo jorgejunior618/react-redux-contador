@@ -9,8 +9,6 @@ import { MainWrapper } from './styles';
 function CounterScreen() {
   const count: number = useSelector((state: CounterState) => state.count);
   const dispatch: Dispatch<any> = useDispatch();
-  const [modificado, setModificado] = useState(true);
-  const documentComponent = useRef(document.getElementsByTagName('body'));
 
   const increment = () => {
     dispatch(incrementCounter());
@@ -20,6 +18,20 @@ function CounterScreen() {
     dispatch(decrementCounter());
   };
 
+  function View() {
+    return (
+      <MainWrapper>
+        <Counter
+          count={count}
+          incrementCounter={increment}
+          decrementCounter={decrement}
+        />
+      </MainWrapper>
+    );
+  }
+
+  const [modificado, setModificado] = useState(true);
+  const documentComponent = useRef(document.getElementsByTagName('body'));
   useEffect(() => {
     if (modificado) {
       documentComponent.current[0].addEventListener('keydown', (event) => {
@@ -50,15 +62,7 @@ function CounterScreen() {
     }
   }, []);
 
-  return (
-    <MainWrapper>
-      <Counter
-        count={count}
-        incrementCounter={increment}
-        decrementCounter={decrement}
-      />
-    </MainWrapper>
-  );
+  return View();
 }
 
 export default CounterScreen;
