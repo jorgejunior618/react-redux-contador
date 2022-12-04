@@ -1,11 +1,11 @@
 import React from 'react';
 import './css/App.css';
-import CounterScreenHooks from './screens/CounterScreenHooks';
+import CounterScreenRedux from './screens/CounterScreenRedux';
 
 function App() {
   return (
     <div className="App">
-      <CounterScreenHooks />
+      <CounterScreenRedux />
     </div>
   );
 }
