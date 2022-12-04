@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ActionButton from '../Button';
 import {
   Title, Row, Text, CounterWrapper,
@@ -11,9 +11,11 @@ type Props = {
 };
 
 function Counter({ count, incrementCounter, decrementCounter }: Props) {
+  const [titulo] = useState('Contador');
+
   return (
     <div>
-      <Title>Counter</Title>
+      <Title>{titulo}</Title>
       <Row>
         <ActionButton
           type="button"
