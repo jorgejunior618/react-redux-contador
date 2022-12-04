@@ -3,24 +3,26 @@ import { CounterAction, DispatchType } from '../type';
 export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 
-function modifyCounter(action: CounterAction) {
-  return (dispatch: DispatchType) => {
-    dispatch(action);
+function incrementCounterStore(): CounterAction {
+  return {
+    type: INCREMENT,
+  };
+}
+
+function decrementCounterStore(): CounterAction {
+  return {
+    type: DECREMENT,
   };
 }
 
 export function incrementCounter() {
-  const action: CounterAction = {
-    type: INCREMENT,
+  return (dispatch: DispatchType) => {
+    dispatch(incrementCounterStore());
   };
-
-  return modifyCounter(action);
 }
 
 export function decrementCounter() {
-  const action: CounterAction = {
-    type: DECREMENT,
+  return (dispatch: DispatchType) => {
+    dispatch(decrementCounterStore());
   };
-
-  return modifyCounter(action);
 }
