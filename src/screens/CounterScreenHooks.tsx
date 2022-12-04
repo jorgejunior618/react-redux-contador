@@ -1,6 +1,4 @@
-import React, {
-  useEffect, useRef, useState, useCallback,
-} from 'react';
+import React, { useState, useCallback } from 'react';
 import Counter from '../components/Counter';
 import { MainWrapper } from './styles';
 
@@ -26,38 +24,6 @@ function CounterScreen() {
       </MainWrapper>
     );
   }
-
-  const [modificado, setModificado] = useState(true);
-  const documentComponent = useRef(document.getElementsByTagName('body'));
-  useEffect(() => {
-    if (modificado) {
-      documentComponent.current[0].addEventListener('keydown', (event) => {
-        switch (event.key.toLowerCase()) {
-          case 'arrowup':
-            increment();
-            break;
-          case 'arrowright':
-            increment();
-            break;
-          case '+':
-            increment();
-            break;
-          case 'arrowleft':
-            decrement();
-            break;
-          case 'arrowdown':
-            decrement();
-            break;
-          case '-':
-            decrement();
-            break;
-          default:
-            break;
-        }
-      });
-      setModificado(false);
-    }
-  }, []);
 
   return View();
 }
