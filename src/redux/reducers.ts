@@ -7,17 +7,13 @@ const initialState: CounterState = {
 
 const reducer = (
   state: CounterState = initialState,
-  action: CounterAction = { type: 'DEFAULT' },
+  action: CounterAction = { type: '' },
 ): CounterState => {
   switch (action.type) {
     case INCREMENT:
-      return {
-        count: state.count + 1,
-      };
+      return { count: state.count + 1 };
     case DECREMENT:
-      return {
-        count: state.count - 1,
-      };
+      return { count: state.count - 1 };
     default:
       return state;
   }
