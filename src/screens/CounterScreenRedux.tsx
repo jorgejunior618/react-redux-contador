@@ -10,13 +10,8 @@ function CounterScreen() {
   const count: number = useSelector((state: CounterState) => state.count);
   const dispatch: Dispatch<any> = useDispatch();
 
-  const increment = () => {
-    dispatch(incrementCounter());
-  };
-
-  const decrement = () => {
-    dispatch(decrementCounter());
-  };
+  const increment = () => dispatch(incrementCounter());
+  const decrement = () => dispatch(decrementCounter());
 
   function View() {
     return (
